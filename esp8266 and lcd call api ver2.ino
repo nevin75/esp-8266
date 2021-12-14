@@ -43,7 +43,7 @@ void setup() {
     delay(1000);
   }
   WiFi.mode(WIFI_STA);
-  WiFiMulti.addAP("SASKTEL050", "3065357624");
+  WiFiMulti.addAP("[YOUR_SSID", "YOUR_PASSWORD");
   pinMode(3, OUTPUT);
 }
 
@@ -76,7 +76,7 @@ String GetPayload (ESP8266WiFiMulti WiFiMulti)
     WiFiClient client;
     HTTPClient http;
     if (debug)    Serial.print("[HTTP] begin...\n");
-    if (http.begin(client, "http://api.openweathermap.org/data/2.5/weather?q=Regina&units=metric&appid=54cc82d379192b5fd110a47129f46a56")) 
+    if (http.begin(client, "http://api.openweathermap.org/data/2.5/weather?q=Regina&units=metric&appid=[YOUR_API_KEY]")) 
     { 
         if (debug)    Serial.print("[HTTP] GET...\n");
       // start connection and send HTTP header
